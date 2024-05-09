@@ -21,12 +21,12 @@ const Header = (props: HeaderProps) => {
   const {toggleTheme} = useTheme();
 
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between pt-[68px] pb-[90px]">
       <Navbar navbarItems={navbarItems} />
       <div className="flex gap-6">
         <Button variant="reset"
         onClick={toggleTheme}>
-          <ToggleTheme className="text-icons-light dark:text-icons-dark" />
+          <ToggleTheme className="text-icons-light dark:text-icons-dark transition-opacity delay-75 hover:opacity-70" />
         </Button>
         <ToggleSwitcher />
       </div>

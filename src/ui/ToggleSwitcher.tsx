@@ -8,7 +8,11 @@ const ToggleSwitcher = () => {
   const locale = useLocale() as Locale;
 
   return (
-    <Button variant="reset" onClick={toggleLocale}>
+    <Button
+      className="transition-opacity delay-75 hover:opacity-70"
+      variant="reset"
+      onClick={toggleLocale}
+    >
       {locale === "en" ? "EN" : "RU"}
     </Button>
   );

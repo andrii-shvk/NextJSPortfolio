@@ -18,8 +18,8 @@ const Navbar = (props: NavbarProps) => {
           <li key={item.name}>
             <Button
               key={item.name}
-              className="text third-level-title text-text-light transition-colors
-            delay-75 hover:opacity-80 dark:text-text-dark"
+              className="text third-level-title transition-colors
+            delay-75 hover:opacity-80 font-semibold"
               variant="reset"
             >
               {t(`${item.name}`)}

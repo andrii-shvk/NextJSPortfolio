@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
-export type VariantBtn = "main" | "reset";
+export type VariantBtn = "main" | "mainLight" | "reset";
 
 interface ButtonProps {
   children: ReactNode;
@@ -18,7 +18,8 @@ const Button = (props: ReactTagProps<"button"> & ButtonProps) => {
       className={clsx(
         className,
         {
-          main: "text hover:text-white-light bg-accent-light px-4 py-2 transition-colors delay-75 dark:bg-accent-dark",
+          main: "btn hover:text-accent-lightYellow hover:bg-accent-darkYellowHover bg-accent-lightYellow",
+          mainLight: "btn bg-accent-light hover:bg-accent-dark hover:text-opacity-80",
           reset: "text",
         }[variant],
       )}

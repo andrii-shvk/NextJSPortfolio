@@ -4,19 +4,55 @@
 
 @layer components {
   .main-title {
-    @apply text-5xl max-lg:text-3xl;
+    @apply text-[54px] max-lg:text-3xl;
   }
 
   .second-level-title {
-    @apply text-4xl max-lg:text-2xl;
+    @apply text-[42px] font-semibold leading-snug max-lg:text-2xl;
   }
 
   .third-level-title {
-    @apply text-[20px] font-semibold max-lg:text-[16px];
+    @apply text-[20px] font-normal max-lg:text-[16px];
   }
 
   .text {
     @apply text-text-light dark:text-text-dark;
+  }
+
+  .btn {
+    @apply third-level-title rounded-[50px] px-10 py-[14px] font-bold text-text-light transition-colors delay-75;
+  }
+
+  .link {
+    @apply third-level-title text-link-primary hover:text-link-hover transition-all delay-75;
+  }
+}
+
+.linkHover {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: #2085f8; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+  }
+  &:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px; /* Высота линии */
+    background-color: #2085f8; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s; /* Время эффекта */
   }
 }
 
