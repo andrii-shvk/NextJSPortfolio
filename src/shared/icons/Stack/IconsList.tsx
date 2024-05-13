@@ -6,7 +6,7 @@ const IconsList = () => {
   const iconsNames = Object.keys(ICONS) as Array<keyof typeof ICONS>;
 
   return (
-    <div className="flex gap-[20px]">
+    <div className="flex gap-[30px]">
       {iconsNames.map((iconName, i) => {
         const Icon = ICONS[iconName];
         return (

@@ -4,7 +4,7 @@
 
 @layer components {
   .main-title {
-    @apply text-[54px] max-lg:text-3xl;
+    @apply text-[54px] max-lg:text-3xl font-bold;
   }
 
   .second-level-title {
@@ -15,6 +15,10 @@
     @apply text-[20px] font-normal max-lg:text-[16px];
   }
 
+  .fourth-level-title {
+    @apply text-[16px] font-normal max-lg:text-[14px];
+  }
+
   .text {
     @apply text-text-light dark:text-text-dark;
   }
@@ -23,10 +27,126 @@
     @apply third-level-title rounded-[50px] px-10 py-[14px] font-bold text-text-light transition-colors delay-75;
   }
 
+  .btnRepo {
+    @apply text flex w-[170px] max-w-full items-center justify-center gap-[5px] rounded-[10px] px-5 py-[9px] text-[16px] font-bold text-text-light transition-colors delay-75;
+  }
+
   .link {
     @apply third-level-title text-link-primary hover:text-link-hover transition-all delay-75;
   }
+
+  .timeline {
+    @apply relative
+    w-1/2
+    pb-[60px]
+    pr-[51px]
+    text-right
+    before:absolute
+    before:-right-[2px]
+    before:bottom-0
+    before:top-0
+    before:w-1
+    before:bg-[#E1EEF4]
+    before:[content:'']
+    after:absolute
+    after:-right-[17px]
+    after:top-0
+    after:h-[34px]
+    after:w-[34px]
+    after:rounded-[50%]
+    after:border-4
+    after:border-solid
+    after:border-[#E1EEF4]
+    after:bg-bg-light
+    after:[content:''];
+  }
+
+  .leftTimeline {
+    @apply pr-[51px] text-right before:-right-[2px] after:-right-[17px];
+  }
+
+  .rightTimeline {
+    @apply ml-auto pl-[51px] text-left before:-left-0.5 after:right-[96%];
+  }
+
+  .borderLine {
+    @apply inline bg-no-repeat bg-bottom bg-gradient-to-r from-underline-lightFrom to-underline-lightTo dark:from-underline-darkFrom dark:to-underline-darkTo bg-[length:100%_4px];
+  }
+
 }
+
+.none {
+  display: none;
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cardNoneMix {
+  animation: slideOut 1s ease forwards;
+  animation-fill-mode: forwards;
+}
+
+.cardShowMix {
+  animation: slideIn 1s ease forwards;
+  animation-fill-mode: forwards;
+}
+
+.gradBorder {
+  display: inline;
+  background-repeat: no-repeat;
+  background-position: center bottom 5px;
+  background-size: 100% 7px;
+  background-image: linear-gradient(to right, #080701, #ac9735);
+}
+
+.borderPosition {
+  background-position: center bottom 7px;
+}
+
+/* section background with animate */
+/* .bgAnimate {
+  background: linear-gradient(
+    140deg,
+    #7ab7f1,
+    #d9f1e4,
+    #a2cfed,
+    #f7cec9,
+    #dd9ff1
+  );
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+/* Link hover */
 
 .linkHover {
   position: relative;

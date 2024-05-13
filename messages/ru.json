@@ -4,5 +4,30 @@
     "Portfolio": "Портфолио",
     "MyExperience": "Мой опыт",
     "MyContacts": "Мои контакты"
+  },
+  "MainSection": {
+    "name": "Андрей",
+    "surname": "Шевчук",
+    "description": "Frontend разработчик, работаю в области веб разработки более 3-х лет. Живу в",
+    "descriptionSpan": "Вирджинии-Бич, США.",
+    "skills": "Мои навыки",
+    "contacts": "Контакты"
+  },
+  "Portfolio": {
+    "title": "Портфолио"
+  },
+  "MyExperience": {
+    "title": "Мои навыки"
+  },
+  "Contacts": {
+    "title": "Мои контакты",
+    "description": "Если Вы ищите Front End - разработчика в свою кмоанду или для работы над проектом - напишите мне.",
+    "Phone": "Телефон",
+    "Location": "Местоположение",
+    "Virginia": "Вирджиния-Бич, США"
+  },
+  "Footer": {
+    "name": "Андрей Шевчук",
+    "description": "Front End - разработчик. Готов работать с Вами."
   }
 }

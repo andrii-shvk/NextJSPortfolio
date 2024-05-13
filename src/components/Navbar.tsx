@@ -13,7 +13,7 @@ const Navbar = (props: NavbarProps) => {
 
   return (
     <nav>
-      <ul className="flex gap-14">
+      <ul className="flex gap-24">
         {navbarItems?.map((item) => (
           <li key={item.name}>
             <Button

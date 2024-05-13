@@ -14,6 +14,7 @@ const Github = (props: ReactTagProps<"svg">) => {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        {...props}
       >
         <title>github [#142]</title>
         <desc>Created with Sketch.</desc>
