@@ -24,7 +24,9 @@
     "description": "If you are looking for a Front End Developer to join your team or to work on a special project, send me a request.",
     "Phone": "Phone",
     "Location": "Location",
-    "Virginia": "Virginia Beach, USA"
+    "Virginia": "Virginia Beach, USA",
+    "message": "Message",
+    "submit": "Submit"
   },
   "Footer": {
     "name": "Andrii Shevchuk",

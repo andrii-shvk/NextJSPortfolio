@@ -4,7 +4,7 @@
 
 @layer components {
   .main-title {
-    @apply text-[54px] max-lg:text-3xl font-bold;
+    @apply text-[54px] font-bold max-lg:text-3xl;
   }
 
   .second-level-title {
@@ -32,7 +32,7 @@
   }
 
   .link {
-    @apply third-level-title text-link-primary hover:text-link-hover transition-all delay-75;
+    @apply third-level-title text-link-primary transition-all delay-75 hover:text-link-hover dark:hover:text-[#20acf8];
   }
 
   .timeline {
@@ -70,9 +70,22 @@
   }
 
   .borderLine {
-    @apply inline bg-no-repeat bg-bottom bg-gradient-to-r from-underline-lightFrom to-underline-lightTo dark:from-underline-darkFrom dark:to-underline-darkTo bg-[length:100%_4px];
+    @apply inline bg-gradient-to-r from-underline-lightFrom to-underline-lightTo bg-[length:100%_4px] bg-bottom bg-no-repeat dark:from-underline-darkFrom dark:to-underline-darkTo;
+  }
+}
+
+@layer utilities {
+  .input {
+    @apply border-b-2 border-b-[#E5E5E5] text-text-light outline-none dark:text-text-light;
   }
 
+  .inputActive {
+    @apply -top-6 text-base font-bold text-[#ECA73F] transition-all delay-75;
+  }
+
+  .textAreaActive {
+    @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-75;
+  }
 }
 
 .none {
@@ -120,7 +133,7 @@
 }
 
 /* section background with animate */
-/* .bgAnimate {
+.bgAnimate {
   background: linear-gradient(
     140deg,
     #7ab7f1,
@@ -135,16 +148,16 @@
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 /* Link hover */
 
