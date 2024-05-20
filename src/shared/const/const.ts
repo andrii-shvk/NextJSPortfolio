@@ -6,10 +6,15 @@ export const skills = [
   "Storybook, e2e tests",
 ];
 
-export const projectNames = [
+export interface projectNamesFilter {
+  name: string;
+  dataFilter: string;
+}
+
+export const projectNames: projectNamesFilter[] = [
     {name: 'All projects', dataFilter: 'all'},
-    {name: 'Front End', dataFilter: 'frontEnd'},
-    {name: 'Front End + Back End', dataFilter: 'backEnd'},
+    {name: 'Front End', dataFilter: 'frontend'},
+    {name: 'Front End + Back End', dataFilter: 'backend'},
 ];
 
 export const experienceList = [

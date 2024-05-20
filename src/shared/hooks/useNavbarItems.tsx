@@ -1,28 +1,55 @@
+import { RefObject, useRef } from "react";
+
 const useNavbarItems = () => {
-    
-    const navbarItems = [
-        {
-            name: "MySkills",
-            fn: () => {},
-        },
-        {
-            name: "Portfolio",
-            fn: () => {},
-        },
-        {
-            name: "MyExperience",
-            fn: () => {},
-        },
-        {
-            name: "MyContacts",
-            fn: () => {},
-        },
-    ];
+  const refSkills = useRef<HTMLTableSectionElement>(null);
+  const refPortfolio = useRef<HTMLTableSectionElement>(null);
+  const refExperience = useRef<HTMLTableSectionElement>(null);
+  const refContacts = useRef<HTMLTableSectionElement>(null);
 
-    return {
-        navbarItems
+  const handleClick = (ref: RefObject<HTMLTableSectionElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth"});
     }
+  };
 
-}
+  const navbarItems = [
+    {
+      name: "MySkills",
+      fn: () => handleClick(refSkills),
+    },
+    {
+      name: "Portfolio",
+      fn: () => handleClick(refPortfolio),
+    },
+    {
+      name: "MyExperience",
+      fn: () => handleClick(refExperience),
+    },
+    {
+      name: "MyContacts",
+      fn: () => handleClick(refContacts),
+    },
+  ];
 
-export {useNavbarItems};
+  const navBtnItems = [
+    {
+      name: "projects",
+      fn: () => handleClick(refPortfolio),
+    },
+    {
+      name: "contacts",
+      fn: () => handleClick(refContacts),
+    },
+  ];
+
+  return {
+    navbarItems,
+    navBtnItems,
+    refSkills,
+    refPortfolio,
+    refExperience,
+    refContacts,
+  };
+};
+
+export { useNavbarItems };

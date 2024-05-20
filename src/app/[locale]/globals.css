@@ -80,11 +80,11 @@
   }
 
   .inputActive {
-    @apply -top-6 text-base font-bold text-[#ECA73F] transition-all delay-75;
+    @apply -top-6 text-base font-bold text-[#ECA73F] transition-all  delay-150;
   }
 
   .textAreaActive {
-    @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-75;
+    @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-150;
   }
 }
 

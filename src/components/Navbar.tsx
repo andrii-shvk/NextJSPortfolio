@@ -1,4 +1,3 @@
-import { useNavbarItems } from "@/shared/hooks/useNavbarItems";
 import { Button } from "@/ui/Button";
 import { useTranslations } from "next-intl";
 import { NavLinks } from "./Header";
@@ -18,8 +17,9 @@ const Navbar = (props: NavbarProps) => {
           <li key={item.name}>
             <Button
               key={item.name}
-              className="text third-level-title transition-colors
-            delay-75 hover:opacity-80 font-semibold"
+              onClick={item.fn}
+              className="text third-level-title font-semibold
+            transition-colors delay-75 hover:opacity-80"
               variant="reset"
             >
               {t(`${item.name}`)}

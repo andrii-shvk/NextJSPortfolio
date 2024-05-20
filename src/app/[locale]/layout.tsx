@@ -27,9 +27,9 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={`${montserrat.className} bg-bg-light dark:bg-bg-dark`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider>
-                <main className="h-full">{children}</main>
-            </ThemeProvider>
+          <ThemeProvider>
+              <main className="h-full">{children}</main>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

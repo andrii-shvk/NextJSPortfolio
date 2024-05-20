@@ -21,7 +21,6 @@ const Button = (props: ReactTagProps<"button"> & ButtonProps) => {
     dataFilter,
     active = false,
   } = props;
-  
   return (
     <button
       className={clsx(
@@ -29,14 +28,13 @@ const Button = (props: ReactTagProps<"button"> & ButtonProps) => {
         {
           main: "btn bg-accent-lightYellow hover:bg-accent-darkYellowHover hover:text-accent-lightYellow",
           mainLight:
-            "btn bg-accent-light hover:bg-accent-dark hover:text-opacity-80",
+            "btn bg-accent-light hover:bg-accent-dark",
           filterBtn:
             "text-mixitUp-light hover:text-mixitUp-hover active:text-mixitUp-active dark:active:text-mixitUp-darkActive",
           reset: "text",
         }[variant],
         {
-          ["dark:text-mixitUp-darkActive"]: active,
-          ["text-mixitUp-active"]: active,
+          ["text-bg-dark dark:text-mixitUp-darkActive"]: active
         },
       )}
       onClick={onClick}

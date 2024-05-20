@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl";
 import { Navbar } from "./Navbar";
 import { ToggleTheme } from "@/shared/icons/ToggleTheme";
 import { Button } from "@/ui/Button";
@@ -16,17 +15,14 @@ interface HeaderProps {
 
 const Header = (props: HeaderProps) => {
   const { navbarItems } = props;
-  const t = useTranslations("HeaderNav");
-
-  const {toggleTheme} = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
-    <header className="flex justify-between pt-[68px] pb-[90px]">
+    <header className="flex justify-between pb-[90px] pt-[68px]">
       <Navbar navbarItems={navbarItems} />
       <div className="flex gap-6">
-        <Button variant="reset"
-        onClick={toggleTheme}>
-          <ToggleTheme className="text-icons-light dark:text-icons-dark transition-opacity delay-75 hover:opacity-70" />
+        <Button variant="reset" onClick={toggleTheme}>
+          <ToggleTheme className="text-icons-light transition-opacity delay-75 hover:opacity-70 dark:text-icons-dark" />
         </Button>
         <ToggleSwitcher />
       </div>
