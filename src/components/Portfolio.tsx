@@ -21,7 +21,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
   const [card, setCard] = useState<string>("all");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/${card}`)
+    fetch(`https://portfolioserver-1xcp1gph.b4a.run/${card}`)
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
