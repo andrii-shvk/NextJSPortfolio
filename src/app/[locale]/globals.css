@@ -4,7 +4,7 @@
 
 @layer components {
   .main-title {
-    @apply text-[54px] font-bold max-lg:text-3xl;
+    @apply text-[54px] font-bold lg:text-[42px];
   }
 
   .second-level-title {
@@ -86,7 +86,43 @@
   .textAreaActive {
     @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-150;
   }
+
 }
+
+/* skeleton */
+.skeleton {
+    position: relative;
+    box-shadow: 0 2px 10px 0 rgba(226,238,241,1);
+    background: rgba(226,238,241,1);
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -150px;
+      top: 0;
+      height: 100%;
+      width: 80%;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        #fff 50%,
+        transparent 100%
+      );
+      animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+  }
+  
+  @keyframes load {
+    from {
+      left: -150px;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
 
 .none {
   display: none;

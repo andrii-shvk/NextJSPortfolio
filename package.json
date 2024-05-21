@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.5",
+    "@nextui-org/theme": "^2.2.3",
     "@types/nodemailer": "^6.4.15",
     "aos": "^2.3.4",
     "axios": "^1.6.8",

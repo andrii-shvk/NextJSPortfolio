@@ -1,10 +1,5 @@
 import { Button } from "@/ui/Button";
-import {
-  forwardRef,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { forwardRef, useContext, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { projectNames } from "@/shared/const/const";
 import clsx from "clsx";
@@ -13,9 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { IProject } from "@/models/IProject";
 import GithubIcon from "@/shared/assets/img/Icons/Github.svg";
+import { Skeleton } from "@/ui/Skeleton";
 
 const Portfolio = forwardRef<HTMLElement>((_, ref) => {
-  
   const [projects, setProjects] = useState<IProject[]>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [card, setCard] = useState<string>("all");
@@ -32,6 +27,21 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
   const t = useTranslations("Portfolio");
   const { theme } = useContext(ThemeProviderContext);
 
+  const cardSkeleton = () =>
+    new Array(2).fill(0).map((el, idx) => (
+      <div className="flex flex-col items-center" key={idx}>
+        <Skeleton className="group h-[370px] w-[540px]" />
+        <div className="mb-4 mt-5 flex flex-col items-center gap-3">
+          <Skeleton className="h-10 w-[330px]" />
+          <Skeleton className="h-7 w-[250px]" />
+        </div>
+        <div className="flex justify-center gap-2.5">
+          <Skeleton className="h-16 w-[170px]" />
+          <Skeleton className="h-16 w-[170px]" />
+        </div>
+      </div>
+    ));
+
   return (
     <section
       data-aos="fade-up"
@@ -41,7 +51,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
         ["bgAnimate"]: theme === "light",
       })}
     >
-      <div className=" container mx-auto h-full px-5">
+      <div className="container mx-auto h-full px-5">
         <h2 className="main-title text borderLine borderPosition bg-[length:100%_7px]">
           {t("title")}
         </h2>
@@ -61,7 +71,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
             ))}
           </div>
           <div className="mt-[35px] flex flex-wrap justify-between gap-y-[50px]">
-            {isLoading && <h1 className="text text-3xl">Loading...</h1>}
+            {isLoading && cardSkeleton()}
             {projects &&
               projects.map((el) => (
                 <div className="group w-[540px]" key={el.title}>

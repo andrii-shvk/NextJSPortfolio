@@ -1,10 +1,23 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: [
+    "./src/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+  ],
   darkMode: "selector",
   theme: {
     extend: {
+      container: {
+        screens: {
+          sm: '320px',
+          md: '768px',
+          lg: '900px',
+          xl: '1140px',
+          '2xl': '1280px',
+        },
+      },
       colors: {
         bg: {
           // light: "#e2eef1",
@@ -51,6 +64,9 @@ const config: Config = {
         footer: {
           light: "#333",
           dark: "rgb(51 51 51 / 46%)"
+        },
+        skeleton: {
+          gradientDark: '#232D31B7'
         }
       },
       listStyleType: {
@@ -58,6 +74,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

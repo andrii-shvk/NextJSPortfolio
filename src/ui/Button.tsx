@@ -34,7 +34,7 @@ const Button = (props: ReactTagProps<"button"> & ButtonProps) => {
           reset: "text",
         }[variant],
         {
-          ["text-bg-dark dark:text-mixitUp-darkActive"]: active
+          ["text-text-light dark:text-mixitUp-darkActive"]: active
         },
       )}
       onClick={onClick}
