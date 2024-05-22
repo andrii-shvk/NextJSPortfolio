@@ -4,15 +4,15 @@
 
 @layer components {
   .main-title {
-    @apply text-[54px] font-bold lg:text-[42px];
+    @apply text-[54px] font-bold max-xl:text-[42px] max-lg:text-[32px];
   }
 
   .second-level-title {
-    @apply text-[42px] font-semibold leading-snug max-lg:text-2xl;
+    @apply text-[42px] font-semibold leading-snug max-xl:text-[32px] max-lg:text-[24px];
   }
 
   .third-level-title {
-    @apply text-[20px] font-normal max-lg:text-[16px];
+    @apply text-[20px] font-normal max-xl:text-[18px] max-lg:text-base;
   }
 
   .fourth-level-title {
@@ -28,11 +28,11 @@
   }
 
   .btnRepo {
-    @apply text flex w-[170px] max-w-full items-center justify-center gap-[5px] rounded-[10px] px-5 py-[9px] text-[16px] font-bold text-text-light transition-colors delay-75;
+    @apply text flex w-[170px] max-w-full items-center justify-center gap-[5px] rounded-[10px] px-5 py-[9px] text-[16px] text-base font-bold text-text-light transition-colors delay-75 max-lg:w-[160px] max-lg:py-[5px] max-md:w-[140px] max-md:px-3 max-md:text-sm;
   }
 
   .link {
-    @apply third-level-title text-link-primary transition-all delay-75 hover:text-link-hover dark:hover:text-[#20acf8];
+    @apply text-xl text-link-primary transition-all delay-75 hover:text-link-hover max-xl:text-base dark:hover:text-[#20acf8];
   }
 
   .timeline {
@@ -58,15 +58,20 @@
     after:border-solid
     after:border-[#E1EEF4]
     after:bg-bg-light
-    after:[content:''];
+    after:[content:'']
+    before:last:hidden
+    max-lg:pl-[25px]
+    max-lg:text-left
+    max-lg:before:-left-[2px]
+    max-lg:after:-left-[17px];
   }
 
   .leftTimeline {
-    @apply pr-[51px] text-right before:-right-[2px] after:-right-[17px];
+    @apply pr-[51px] text-right before:-right-[2px] after:-right-[17px] max-xl:pr-[37px];
   }
 
   .rightTimeline {
-    @apply ml-auto pl-[51px] text-left before:-left-0.5 after:right-[96%];
+    @apply ml-auto pl-[51px] text-left before:-left-0.5 after:right-[96%] max-xl:pl-[37px] max-lg:pl-[25px];
   }
 
   .borderLine {
@@ -80,49 +85,48 @@
   }
 
   .inputActive {
-    @apply -top-6 text-base font-bold text-[#ECA73F] transition-all  delay-150;
+    @apply -top-6 text-base font-bold text-[#ECA73F] transition-all delay-150;
   }
 
   .textAreaActive {
     @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-150;
   }
-
 }
 
 /* skeleton */
 .skeleton {
-    position: relative;
-    box-shadow: 0 2px 10px 0 rgba(226,238,241,1);
-    background: rgba(226,238,241,1);
-    overflow: hidden;
-  
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: -150px;
-      top: 0;
-      height: 100%;
-      width: 80%;
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        #fff 50%,
-        transparent 100%
-      );
-      animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
+  position: relative;
+  box-shadow: 0 2px 10px 0 rgba(226, 238, 241, 1);
+  background: rgba(226, 238, 241, 1);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #fff 50%,
+      transparent 100%
+    );
+    animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
-  
-  @keyframes load {
-    from {
-      left: -150px;
-    }
-  
-    to {
-      left: 100%;
-    }
+}
+
+@keyframes load {
+  from {
+    left: -150px;
   }
+
+  to {
+    left: 100%;
+  }
+}
 
 .none {
   display: none;

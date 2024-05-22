@@ -30,13 +30,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="container mx-auto h-full px-5">
+      <div className="container mx-auto h-full">
         <Header navbarItems={navbarItems} />
         <Main navBtnItems={navBtnItems} />
         <Skills ref={refSkills} />
       </div>
       <Portfolio ref={refPortfolio} />
-      <div className="container mx-auto h-full px-5">
+      <div className="container mx-auto h-full">
         <Experience ref={refExperience} />
       </div>
       <Contacts ref={refContacts} />

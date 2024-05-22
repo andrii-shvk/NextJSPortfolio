@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const Facebook = (props: ReactTagProps<"svg">) => {
+  const {width, height} = props;
   return (
     <Link
       target="_blank"
@@ -8,8 +9,8 @@ const Facebook = (props: ReactTagProps<"svg">) => {
       className="transition-all delay-75 hover:opacity-80"
     >
       <svg
-        width="48"
-        height="48"
+        width={width}
+        height={height}
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

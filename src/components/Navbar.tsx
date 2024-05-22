@@ -12,7 +12,7 @@ const Navbar = (props: NavbarProps) => {
 
   return (
     <nav>
-      <ul className="flex gap-24 lg:gap-12">
+      <ul className="flex gap-24 max-xl:gap-12 max-lg:hidden">
         {navbarItems?.map((item) => (
           <li key={item.name}>
             <Button

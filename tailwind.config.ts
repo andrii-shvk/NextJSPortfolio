@@ -1,28 +1,40 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
   darkMode: "selector",
   theme: {
     extend: {
       container: {
         screens: {
-          sm: '320px',
-          md: '768px',
-          lg: '900px',
-          xl: '1140px',
-          '2xl': '1280px',
+          sm: "320px",
+          md: "768px",
+          lg: "900px",
+          xl: "1140px",
+          "2xl": "1280px",
         },
+        padding: {
+          DEFAULT: '15px',
+        },
+      },
+      screens: {
+        sm: "320px",
+        md: "768px",
+        lg: "900px",
+        xl: "1140px",
+        "2xl": "1280px",
       },
       colors: {
         bg: {
-          // light: "#e2eef1",
           light: "#fff",
           dark: "#0c1214",
+        },
+        bgMenu: {
+          primary: 'rgba(37, 73, 116, 0.80)'
         },
         accent: {
           light: "#e2edf4",
@@ -33,8 +45,8 @@ const config: Config = {
         },
         text: {
           light: "#000",
-          dark: "#fff",
-          lightBrown: "#323232"
+          dark: "#EDEDED",
+          lightBrown: "#323232",
         },
         link: {
           primary: "#2085f8",
@@ -45,7 +57,6 @@ const config: Config = {
           lightTo: "#FBDC4D",
           darkFrom: "#080701",
           darkTo: "#ac9735",
-  
         },
         white: {
           light: "#ffffff",
@@ -63,11 +74,11 @@ const config: Config = {
         },
         footer: {
           light: "#333",
-          dark: "rgb(51 51 51 / 46%)"
+          dark: "rgb(51 51 51 / 46%)",
         },
         skeleton: {
-          gradientDark: '#232D31B7'
-        }
+          gradientDark: "#232D31B7",
+        },
       },
       listStyleType: {
         custom: '"\\2014"',
