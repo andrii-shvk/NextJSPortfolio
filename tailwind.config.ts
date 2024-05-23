@@ -22,7 +22,6 @@ const config: Config = {
         },
       },
       screens: {
-        sm: "320px",
         md: "768px",
         lg: "900px",
         xl: "1140px",
@@ -30,7 +29,7 @@ const config: Config = {
       },
       colors: {
         bg: {
-          light: "#fff",
+          light: "#EEEEEE",
           dark: "#0c1214",
         },
         bgMenu: {
@@ -45,7 +44,7 @@ const config: Config = {
         },
         text: {
           light: "#000",
-          dark: "#EDEDED",
+          dark: "#EEEEEE",
           lightBrown: "#323232",
         },
         link: {
@@ -53,7 +52,7 @@ const config: Config = {
           hover: "#1a64b9",
         },
         underline: {
-          lightFrom: "#fff",
+          lightFrom: "#EEEEEE",
           lightTo: "#FBDC4D",
           darkFrom: "#080701",
           darkTo: "#ac9735",

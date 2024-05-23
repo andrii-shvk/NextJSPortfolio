@@ -10,23 +10,32 @@ const Experience = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="py-[70px] max-lg:py-10"
+      className="pb-[70px] pt-[87px] max-lg:py-10"
       data-aos="fade-up"
       data-aos-duration="1500"
     >
       <div className="mx-auto flex flex-col items-center">
-        <h2 className="main-title text borderLine borderPosition mb-[70px] bg-[length:100%_7px] max-xl:mb-[50px] max-lg:mb-10">
+        <h2
+          className="main-title borderLine borderPosition 
+                    mb-[70px] max-xl:mb-[50px] max-lg:mb-10"
+        >
           {t("title")}
         </h2>
-        <div className="[&>*:nth-child(even)]:rightTimeline w-[850px] max-lg:w-[768px] max-md:w-[290px] max-lg:[&>*:nth-child(even)]:ml-[240px] max-md:[&>*:nth-child(even)]:ml-auto">
+        <div
+          className="[&>*:nth-child(even)]:rightTimeline w-[850px] 
+                    max-lg:w-[768px] 
+                    max-md:w-[290px] 
+                    max-lg:[&>*:nth-child(even)]:ml-[240px] 
+                    max-md:[&>*:nth-child(even)]:ml-auto"
+        >
           {experienceList.map((elem) => (
             <div
-              className="timeline leftTimeLine flex flex-col gap-2 max-lg:mx-0 max-lg:ml-[240px] max-lg:mr-auto max-md:ml-auto max-md:w-[246px] max-md:pr-0"
+              className="timeline leftTimeLine flex flex-col gap-2 
+                        max-lg:mx-0 max-lg:ml-[240px] max-lg:mr-auto
+                         max-md:ml-auto max-md:w-[246px] max-md:pr-0"
               key={elem[locale].title}
             >
-              <h3 className="text third-level-title borderLine text-[22px] font-bold leading-snug max-xl:text-xl max-lg:bg-gradient-to-l max-md:mb-2">
-                {elem[locale].title}
-              </h3>
+              <h3 className="titleExpList">{elem[locale].title}</h3>
               <p className="text fourth-level-title">
                 {elem[locale].description}
               </p>

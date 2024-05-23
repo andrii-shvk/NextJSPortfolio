@@ -26,9 +26,9 @@ const Button = (props: ReactTagProps<"button"> & ButtonProps) => {
       className={clsx(
         className,
         {
-          main: "btn bg-accent-lightYellow hover:bg-accent-darkYellowHover hover:text-accent-lightYellow",
+          main: "btn bg-accent-lightYellow active:bg-accent-darkYellowActive  hover:bg-accent-darkYellowHover hover:text-accent-lightYellow",
           mainLight:
-            "btn bg-accent-light hover:bg-accent-dark",
+            "btn bg-[#afd7e5] hover:bg-[#74A2B2] active:opacity-70",
           filterBtn:
             "text-mixitUp-light hover:text-mixitUp-hover active:text-mixitUp-active dark:active:text-mixitUp-darkActive",
           reset: "text",

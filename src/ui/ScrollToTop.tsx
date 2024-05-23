@@ -18,13 +18,10 @@ const ScrollToTop = () => {
 
   return (
     <Button
-      className={clsx(
-        "fixed right-[50px] z-[100] cursor-pointer rounded-[50%] bg-icons-dark px-[12px] py-[10px] transition-all delay-300",
-        {
-          "bottom-[50px]": active,
-          "-bottom-[50px]": !active,
-        },
-      )}
+      className={clsx("scrollToTop", {
+        "bottom-[50px]": active,
+        "-bottom-[50px]": !active,
+      })}
       onClick={scrollToTop}
       variant="reset"
     >

@@ -18,8 +18,8 @@ const Navbar = (props: NavbarProps) => {
             <Button
               key={item.name}
               onClick={item.fn}
-              className="text third-level-title font-semibold
-            transition-colors delay-75 hover:opacity-80"
+              className="text third-level-title font-semibold 
+                        transition-colors delay-75 hover:opacity-80"
               variant="reset"
             >
               {t(`${item.name}`)}

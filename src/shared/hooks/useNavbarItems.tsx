@@ -8,7 +8,7 @@ const useNavbarItems = () => {
 
   const handleClick = (ref: RefObject<HTMLTableSectionElement>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth"});
+      ref.current.scrollIntoView({behavior: "smooth"});
     }
   };
 

@@ -4,15 +4,19 @@
 
 @layer components {
   .main-title {
-    @apply text-[54px] font-bold max-xl:text-[42px] max-lg:text-[32px];
+    @apply text bg-[length:100%_7px] text-[54px] 
+    font-bold max-xl:text-[42px]
+    max-lg:bg-[length:100%_5px] max-lg:text-[32px];
   }
 
   .second-level-title {
-    @apply text-[42px] font-semibold leading-snug max-xl:text-[32px] max-lg:text-[24px];
+    @apply text-[42px] font-semibold leading-snug 
+    max-xl:text-[32px] max-lg:text-[24px];
   }
 
   .third-level-title {
-    @apply text-[20px] font-normal max-xl:text-[18px] max-lg:text-base;
+    @apply text-[20px] font-normal 
+    max-xl:text-[18px] max-lg:text-base;
   }
 
   .fourth-level-title {
@@ -23,59 +27,162 @@
     @apply text-text-light dark:text-text-dark;
   }
 
-  .btn {
-    @apply third-level-title rounded-[50px] px-10 py-[14px] font-bold text-text-light transition-colors delay-75;
+  .headerContent {
+    @apply flex w-[540px] flex-col justify-center gap-[30px] 
+    max-xl:w-[420px] 
+    max-xl:gap-6 
+    max-lg:w-[354px] 
+    max-lg:gap-4 
+    max-md:w-[220px] 
+    max-md:pb-5;
   }
 
-  .btnRepo {
-    @apply text flex w-[170px] max-w-full items-center justify-center gap-[5px] rounded-[10px] px-5 py-[9px] text-[16px] text-base font-bold text-text-light transition-colors delay-75 max-lg:w-[160px] max-lg:py-[5px] max-md:w-[140px] max-md:px-3 max-md:text-sm;
+  .headerNameBlock {
+    @apply text text-7xl font-bold text-text-lightBrown 
+    max-xl:text-[58px] 
+    max-lg:text-[42px] 
+    max-md:ml-2 
+    max-md:text-[32px] 
+    dark:text-text-dark;
   }
 
-  .link {
-    @apply text-xl text-link-primary transition-all delay-75 hover:text-link-hover max-xl:text-base dark:hover:text-[#20acf8];
+  .headerName {
+    @apply bg-[length:100%_20px] 
+    max-xl:bg-[length:100%_15px] 
+    max-lg:bg-[length:100%_11px] 
+    max-md:bg-[length:100%_9px];
+  }
+
+  .headerImg {
+    @apply h-[410px] w-[430px] rounded-[25%] object-cover 
+    max-xl:h-[325px] 
+    max-xl:w-[376px] 
+    max-lg:h-[250px] 
+    max-lg:w-[290px];
+  }
+
+  .mobileMenuNav {
+    @apply flex h-full w-[320px] flex-col justify-between 
+    bg-bg-light 
+    pb-10 pl-[15px] pt-[30px] 
+    max-md:w-full 
+    dark:bg-bg-dark;
+  }
+
+  .portfolioCardsBlock {
+    @apply mt-[35px] flex flex-wrap justify-between gap-y-[50px] 
+    max-xl:gap-10 
+    max-lg:gap-5 
+    max-md:gap-7;
+  }
+
+  .cardHoverBg {
+    @apply relative overflow-hidden 
+    before:absolute
+    before:bottom-0 
+    before:left-0
+    before:right-0
+    before:top-0
+    before:z-[2]
+    before:translate-y-full
+    before:rounded-md
+    before:bg-[#FFDD55BF]
+    before:transition-all
+    before:duration-300
+    before:[content:'']
+    group-hover:before:translate-y-0;
+  }
+
+  .cardHoverSpan {
+    @apply absolute left-1/2 top-1/2 z-20 flex  
+    -translate-x-1/2 -translate-y-1/2 
+    items-center rounded-[80px]  
+    bg-[#EF6857ff] 
+    px-5 py-[15px]
+    text-[18px] font-bold leading-snug text-white-light 
+    opacity-0 transition-[0.3s] group-hover:opacity-100 
+    max-xl:px-[14px]
+    max-xl:text-[14px]
+    max-lg:text-xs
+    max-md:py-[7px]
+    max-md:text-[9px];
+  }
+
+  .cardDescription {
+    @apply mb-[15px] mt-4 flex flex-col items-center gap-y-1.5 
+    max-lg:mb-[7px] 
+    max-lg:mt-1 
+    max-lg:gap-0 max-md:mb-3;
+  }
+
+  .cardTitle {
+    @apply text text-[30px] font-semibold leading-snug tracking-widest 
+    group-hover:text-[#FF543E] 
+    max-xl:text-2xl 
+    max-lg:text-[18px];
+  }
+
+  .cardSubTitle {
+    @apply text third-level-title tracking-wide group-hover:text-[#FF543E] 
+    max-lg:text-[14px]
+    max-md:flex 
+    max-md:w-[200px] 
+    max-md:justify-center;
   }
 
   .timeline {
     @apply relative
-    w-1/2
-    pb-[60px]
-    pr-[51px]
-    text-right
-    before:absolute
-    before:-right-[2px]
-    before:bottom-0
-    before:top-0
-    before:w-1
-    before:bg-[#E1EEF4]
-    before:[content:'']
-    after:absolute
-    after:-right-[17px]
-    after:top-0
-    after:h-[34px]
-    after:w-[34px]
-    after:rounded-[50%]
-    after:border-4
-    after:border-solid
-    after:border-[#E1EEF4]
-    after:bg-bg-light
-    after:[content:'']
-    before:last:hidden
-    max-lg:pl-[25px]
-    max-lg:text-left
-    max-lg:before:-left-[2px]
-    max-lg:after:-left-[17px];
+      w-1/2 pb-[60px] pr-[51px]
+      text-right
+      before:absolute
+      before:-right-[2px]
+      before:bottom-0
+      before:top-0
+      before:w-1
+      before:bg-[#E1EEF4]
+      before:[content:'']
+      after:absolute
+      after:-right-[17px]
+      after:top-0
+      after:h-[34px]
+      after:w-[34px]
+      after:rounded-[50%]
+      after:border-4
+      after:border-solid
+      after:border-[#E1EEF4]
+      after:bg-bg-light
+      after:[content:'']
+      before:last:hidden
+      max-lg:pl-[25px]
+      max-lg:text-left
+      max-lg:before:-left-[2px]
+      max-lg:after:-left-[17px];
   }
 
   .leftTimeline {
-    @apply pr-[51px] text-right before:-right-[2px] after:-right-[17px] max-xl:pr-[37px];
+    @apply pr-[51px] text-right 
+    before:-right-[2px] after:-right-[17px] max-xl:pr-[37px];
   }
 
   .rightTimeline {
-    @apply ml-auto pl-[51px] text-left before:-left-0.5 after:right-[96%] max-xl:pl-[37px] max-lg:pl-[25px];
+    @apply ml-auto pl-[51px] text-left 
+    before:-left-0.5 after:right-[96%] max-xl:pl-[37px] max-lg:pl-[25px];
   }
 
-  .borderLine {
-    @apply inline bg-gradient-to-r from-underline-lightFrom to-underline-lightTo bg-[length:100%_4px] bg-bottom bg-no-repeat dark:from-underline-darkFrom dark:to-underline-darkTo;
+  .formContacts {
+    @apply h-[420px] rounded-[30px] bg-[#EEEEEE] p-[50px] 
+      max-md:h-[375px] 
+      max-md:rounded-[20px] 
+      max-md:px-[15px] 
+      max-md:pb-[30px] 
+      max-md:pt-[45px];
+  }
+
+  .scrollToTop {
+    @apply fixed right-[50px] z-[100] 
+    cursor-pointer rounded-[50%] bg-icons-dark 
+    px-[12px] py-[10px] 
+    transition-all delay-300;
   }
 }
 
@@ -90,6 +197,73 @@
 
   .textAreaActive {
     @apply -top-7 text-base font-bold text-[#ECA73F] transition-all delay-150;
+  }
+
+  .btn {
+    @apply third-level-title rounded-[50px] px-10 py-[14px] 
+    font-bold text-text-light transition-colors delay-75;
+  }
+
+  .btnRepo {
+    @apply text flex w-[170px] max-w-full items-center justify-center gap-[5px] 
+    rounded-[10px] px-5 py-[9px] 
+    text-[16px] text-base font-bold text-text-light 
+    transition-colors delay-75 
+    max-lg:w-[160px] max-lg:py-[5px] 
+    max-md:w-[140px] max-md:px-3 max-md:text-sm;
+  }
+
+  .link {
+    @apply text-xl text-link-primary 
+    transition-all delay-75 hover:text-link-hover
+    max-xl:text-base dark:hover:text-[#20acf8];
+  }
+
+  .borderLine {
+    @apply inline 
+    bg-gradient-to-r 
+    from-underline-lightFrom 
+    to-underline-lightTo 
+    bg-bottom bg-no-repeat 
+    dark:from-underline-darkFrom 
+    dark:to-underline-darkTo;
+  }
+
+  .titleExpList {
+    @apply text third-level-title 
+    borderLine bg-[length:100%_4px] 
+    text-[22px] font-bold leading-snug  
+    max-xl:text-xl 
+    max-lg:bg-gradient-to-l 
+    max-md:mb-2;
+  }
+
+  .hamburgerSpan {
+    @apply block h-[5px] w-10 bg-bg-dark 
+    transition-all duration-300 ease-out dark:bg-text-dark;
+  }
+
+  .ulContacts {
+    @apply flex w-[500px] flex-col gap-[22px] 
+    max-xl:w-[375px] max-lg:w-[270px] max-lg:gap-2.5;
+  }
+
+  .liContacts {
+    @apply text third-level-title flex items-center 
+    max-lg:flex-col max-lg:items-start;
+  }
+
+  .spanContacts {
+    @apply min-w-[188px] font-bold leading-relaxed 
+    max-xl:min-w-[120px];
+  }
+
+  .quotesContacts {
+    @apply absolute -right-[90px] -top-[90px] flex 
+      max-2xl:-right-0 
+      max-2xl:left-[250px]
+      max-2xl:overflow-hidden 
+      max-lg:hidden;
   }
 }
 
@@ -128,8 +302,14 @@
   }
 }
 
-.none {
-  display: none;
+.cardNoneMix {
+  animation: slideOut 1s ease forwards;
+  animation-fill-mode: forwards;
+}
+
+.cardShowMix {
+  animation: slideIn 1s ease forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideOut {
@@ -150,26 +330,11 @@
   }
 }
 
-.cardNoneMix {
-  animation: slideOut 1s ease forwards;
-  animation-fill-mode: forwards;
-}
-
-.cardShowMix {
-  animation: slideIn 1s ease forwards;
-  animation-fill-mode: forwards;
-}
-
-.gradBorder {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center bottom 5px;
-  background-size: 100% 7px;
-  background-image: linear-gradient(to right, #080701, #ac9735);
-}
-
 .borderPosition {
   background-position: center bottom 7px;
+  @media (max-width: 900px) {
+    background-position: center bottom 3px;
+  }
 }
 
 /* section background with animate */
