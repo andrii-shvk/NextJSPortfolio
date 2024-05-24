@@ -35,7 +35,7 @@ const ContactsForm = (props: ContactsFormProps) => {
     setIsLoading(true);
 
     try {
-      const res = await axios.post("/api/email", {
+      const res = await axios.post("https://shevchuk-dev.vercel.app/api/email", {
         email,
         message,
       });

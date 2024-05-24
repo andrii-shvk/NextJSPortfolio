@@ -7,7 +7,7 @@ const useContactsForm = () => {
     const onChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, callback:(arg: string) => void
     ) => {
-        callback(e.target.value);
+        callback(e.target.value); 
     }
 
     const resetForm = () => {

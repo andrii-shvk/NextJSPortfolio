@@ -18,7 +18,6 @@ const nextConfig = {
             },
           ],
     },
-    trailingSlash: true,
 };
  
 export default withNextIntl(nextConfig);
