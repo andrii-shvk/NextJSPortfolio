@@ -3,12 +3,13 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   const formData = await request.json();
-
   const email = formData.email;
+
   const message = formData.message;
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
+    port: 465,
     secure: true,
 
     auth: {
