@@ -17,7 +17,8 @@ const nextConfig = {
               hostname: "**",
             },
           ],
-    }
+    },
+    trailingSlash: true,
 };
  
 export default withNextIntl(nextConfig);
