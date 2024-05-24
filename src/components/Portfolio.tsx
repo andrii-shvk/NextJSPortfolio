@@ -147,4 +147,5 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
+Portfolio.displayName = 'Portfolio';
 export { Portfolio };

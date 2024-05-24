@@ -6,14 +6,13 @@ import Quotes from "@/shared/assets/img/Footer/quotes.png";
 import { FormEvent, forwardRef, useContext, useState } from "react";
 import clsx from "clsx";
 import { ThemeProviderContext } from "@/providers/ThemeProvider";
-import { useMediaQuery } from "react-responsive";
 import Tick from "@/shared/assets/img/Footer/tick.png";
 import { ContactsForm } from "./ContactsForm";
+import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
 
 const Contacts = forwardRef<HTMLElement>((_, ref) => {
   const t = useTranslations("Contacts");
-
-  const isMediumScreen = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMediumScreen = useMediaQuery(768);
 
   // active span
   const [inputActive, setInputActive] = useState<boolean>(false);
@@ -118,7 +117,13 @@ const Contacts = forwardRef<HTMLElement>((_, ref) => {
                 >
                   Form Submitted!
                 </span>
-                <Image loading="lazy" src={Tick} alt="Tick" height={64} width={64} />
+                <Image
+                  loading="lazy"
+                  src={Tick}
+                  alt="Tick"
+                  height={64}
+                  width={64}
+                />
               </div>
             )}
 
@@ -132,4 +137,5 @@ const Contacts = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
+Contacts.displayName = "Contacts";
 export { Contacts };

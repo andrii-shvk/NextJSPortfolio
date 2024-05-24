@@ -51,4 +51,5 @@ const Experience = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
+Experience.displayName = 'Experience';
 export { Experience };

@@ -1,7 +1,10 @@
+import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
 import Link from "next/link";
 
 const Telegram = (props: ReactTagProps<"svg">) => {
   const {width, height} = props;
+  const isLargeScreen = useMediaQuery(900);
+
   return (
     <Link
       target="_blank"
@@ -9,8 +12,8 @@ const Telegram = (props: ReactTagProps<"svg">) => {
       className="transition-all delay-75 hover:opacity-80"
     >
       <svg
-        width={width}
-        height={height}
+        width={isLargeScreen ? 38 : width}
+        height={isLargeScreen ? 38 : height}
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

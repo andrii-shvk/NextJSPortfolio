@@ -26,7 +26,7 @@ const Header = (props: HeaderProps) => {
     isOpen
       ? htmlEL.classList.add("overflow-hidden")
       : htmlEL.classList.remove("overflow-hidden");
-  }, [isOpen]);
+  }, [isOpen, htmlEL]);
 
   return (
     <header
@@ -55,4 +55,5 @@ const Header = (props: HeaderProps) => {
   );
 };
 
+Header.displayName = 'Header';
 export { Header };
