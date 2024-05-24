@@ -118,12 +118,12 @@ const Contacts = forwardRef<HTMLElement>((_, ref) => {
                 >
                   Form Submitted!
                 </span>
-                <Image src={Tick} alt="Tick" height={64} width={64} />
+                <Image loading="lazy" src={Tick} alt="Tick" height={64} width={64} />
               </div>
             )}
 
             <div className="quotesContacts">
-              <Image src={Quotes} alt="quotes" />
+              <Image loading="lazy" src={Quotes} alt="quotes" />
             </div>
           </div>
         </div>

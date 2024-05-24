@@ -99,8 +99,8 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
                         width={540}
                         height={370}
                         className="h-[370px] rounded-md object-cover 
-                                  max-xl:h-[270px] max-lg:h-[180px]"
-                        priority
+                                  max-xl:h-[270px] max-lg:h-[180px]" 
+                        loading="lazy"
                       />
                       <span className="cardHoverSpan">
                         Go to website project
@@ -121,6 +121,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
                           alt="GitHubIcon"
                           width={24}
                           height={24}
+                          loading="lazy"
                         />
                       </Button>
                     </Link>
@@ -132,6 +133,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
                           alt="GitHubIcon"
                           width={24}
                           height={24}
+                          loading="lazy"
                         />
                       </Button>
                     </Link>
