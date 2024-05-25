@@ -87,9 +87,12 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
             {projects &&
               projects.map((el) => (
                 <div
-                  className="group w-[540px] 
-                    max-xl:w-[415px] max-lg:w-[350px] max-md:w-[290px]"
+                  className={`group w-[540px] max-xl:w-[415px] max-lg:w-[350px] max-md:w-[290px]
+                    ${card === el.filter ? "cardShow" : ""}
+                  `}
                   key={el.title}
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
                 >
                   <Link href={el.linkTo} target="_blank">
                     <div className="cardHoverBg">
@@ -99,7 +102,7 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
                         width={540}
                         height={370}
                         className="h-[370px] rounded-md object-cover 
-                                  max-xl:h-[270px] max-lg:h-[180px]" 
+                                  max-xl:h-[270px] max-lg:h-[180px]"
                         loading="lazy"
                       />
                       <span className="cardHoverSpan">
@@ -147,5 +150,5 @@ const Portfolio = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-Portfolio.displayName = 'Portfolio';
+Portfolio.displayName = "Portfolio";
 export { Portfolio };

@@ -139,7 +139,7 @@
       before:bottom-0
       before:top-0
       before:w-1
-      before:bg-[#E1EEF4]
+      before:bg-[#abbec5]
       before:[content:'']
       after:absolute
       after:-right-[17px]
@@ -149,8 +149,8 @@
       after:rounded-[50%]
       after:border-4
       after:border-solid
-      after:border-[#E1EEF4]
-      after:bg-bg-light
+      after:border-[#abbec5]
+      after:bg-[#fff]
       after:[content:'']
       before:last:hidden
       max-lg:pl-[25px]
@@ -302,13 +302,13 @@
   }
 }
 
-.cardNoneMix {
+.cardHidden {
   animation: slideOut 1s ease forwards;
   animation-fill-mode: forwards;
 }
 
-.cardShowMix {
-  animation: slideIn 1s ease forwards;
+.cardShow {
+  animation: slideIn 1s ease;
   animation-fill-mode: forwards;
 }
 
@@ -323,10 +323,14 @@
 
 @keyframes slideIn {
   from {
+    transform: translateY(0);
     opacity: 0;
+    animation-duration: 0.5s;
   }
   to {
     opacity: 1;
+    transform: translateY(100);
+    animation-duration: 0.5s;
   }
 }
 
