@@ -10,7 +10,7 @@ const ScrollToTop = () => {
   const [active, setActive] = useState<boolean>(false);
   useEffect(() => {
     const handleScroll = () => {
-      let scrollY: number = window.scrollY;
+      let scrollY: number = window.scrollY; 
       scrollY > 350 ? setActive(true) : setActive(false);
     };
     window.addEventListener("scroll", handleScroll);

@@ -2,7 +2,8 @@ export const skills = [
   "JavaScript, TypeScript, ReactJS, NextJS",
   "Redux, Redux Toolkit",
   "HTML5, CSS3, SASS, BootStrap, TailwindCSS",
-  "NodeJS, MySQL, PHP",
+  "NodeJS, PostgreSQL, PgAdmin, MySQL, Insomnia",
+  "React-hook-form",
   "Storybook, e2e tests",
 ];
 

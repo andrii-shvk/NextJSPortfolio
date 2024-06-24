@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from "react";
 const useContactsForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  
   const onChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     callback: (arg: string) => void,
