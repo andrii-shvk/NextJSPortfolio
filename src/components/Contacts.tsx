@@ -72,10 +72,10 @@ const Contacts = forwardRef<HTMLElement>((_, ref) => {
               <li className="liContacts">
                 <span className="spanContacts">Email</span>
                 <Link
-                  href="mailto:supamercron@gmail.com"
+                  href="mailto:andrii.shevk@gmail.com"
                   className="link linkHover"
                 >
-                  supamercron@gmail.com
+                  andrii.shevk@gmail.com
                 </Link>
               </li>
               <li className="liContacts">

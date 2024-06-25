@@ -33,8 +33,8 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
         <div className="flex flex-col gap-7 max-xl:gap-5">
           <h1 className="text second-level-title">{t("contacts")} :</h1>
           <IconsList />
-          <Link className="link linkHover" href="mailto:supamercron@gmail.com">
-            supamercron@gmail.com
+          <Link className="link linkHover" href="mailto:andrii.shevk@gmail.com">
+            andrii.shevk@gmail.com
           </Link>
         </div>
       </div>
@@ -42,5 +42,5 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-Skills.displayName = 'Skills';
+Skills.displayName = "Skills";
 export { Skills };

@@ -44,9 +44,9 @@ const MobileMenu = (props: MobileMenuProps) => {
           <IconsList />
           <Link
             className="link linkHover text-xl"
-            href="mailto:supamercron@gmail.com"
+            href="mailto:andrii.shevk@gmail.com"
           >
-            supamercron@gmail.com
+            andrii.shevk@gmail.com
           </Link>
         </div>
       </nav>
