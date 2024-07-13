@@ -42,7 +42,7 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   if (!mounted) {
     return <Preloader />
-  }
+  } 
 
   return (
     <ThemeProviderContext.Provider value={{ theme, setTheme }}>
