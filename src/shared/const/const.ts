@@ -23,14 +23,14 @@ export const experienceList = [
       en: {
         title: "Capri Delivery Pizza",
         description: "React.JS + Vite.JS, module SCSS, redux, rtkQuery, axios.",
-        duration: "Duration: 2 years and 9 months.",
-        data: "From Jan 2021 to Oct 2023",
+        duration: "Duration: 4 years and 9 months.",
+        data: "From Jan 2019 to Oct 2023",
       },
       ru: {
         title: "Capri Доставка Пиццы",
         description: "React.JS + Vite.JS, module SCSS, redux, rtkQuery, axios.",
-        duration: "Длительность: 2 года и 9 месяцев.",
-        data: "От января 2021 до октября 2023",
+        duration: "Длительность: 4 года и 9 месяцев.",
+        data: "От января 2019 до октября 2023",
       },
     },
     {
@@ -65,14 +65,10 @@ export const experienceList = [
       en: {
         title: "My Portoflio",
         description: "Next.JS + TailwindCSS, TypeScript.",
-        duration: "Duration: 2 months.",
-        data: "From March 2024 to May 2024",
       },
       ru: {
         title: "Мое Портфолио",
         description: "Next.JS + TailwindCSS, TypeScript",
-        duration: "Длительность: 2 месяца.",
-        data: "От марта 2024 до мая 2024",
       },
     },
   ];
